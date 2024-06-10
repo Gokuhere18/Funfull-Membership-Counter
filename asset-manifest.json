@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Funfull-Membership-Counter/static/css/main.7d6f1528.css",
+    "main.js": "/Funfull-Membership-Counter/static/js/main.e73f1191.js",
+    "static/js/453.ed3810f9.chunk.js": "/Funfull-Membership-Counter/static/js/453.ed3810f9.chunk.js",
+    "service-worker.js": "/Funfull-Membership-Counter/service-worker.js",
+    "static/media/download.svg": "/Funfull-Membership-Counter/static/media/download.2c8294500537346935d8edd4bdfc309e.svg",
+    "index.html": "/Funfull-Membership-Counter/index.html",
+    "main.7d6f1528.css.map": "/Funfull-Membership-Counter/static/css/main.7d6f1528.css.map",
+    "main.e73f1191.js.map": "/Funfull-Membership-Counter/static/js/main.e73f1191.js.map",
+    "453.ed3810f9.chunk.js.map": "/Funfull-Membership-Counter/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d6f1528.css",
+    "static/js/main.e73f1191.js"
+  ]
+}
