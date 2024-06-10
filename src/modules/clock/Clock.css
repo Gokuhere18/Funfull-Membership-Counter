@@ -1,0 +1,69 @@
+.clock-container {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the SVG and the time */
+  }
+  
+  .feather.feather-clock {
+    width: 27px;
+    height: 27px;
+  }
+  
+  .clock-time {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 1024px) {
+    .clock-container {
+      top: 8px;
+      left: 8px;
+      gap: 6px;
+    }
+  
+    .feather.feather-clock {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .clock-time {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .clock-container {
+      top: 6px;
+      left: 6px;
+      gap: 5px;
+    }
+  
+    .feather.feather-clock {
+      width: 22px;
+      height: 22px;
+    }
+  
+    .clock-time {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .clock-container {
+      top: 5px;
+      left: 5px;
+      gap: 4px;
+    }
+  
+    .feather.feather-clock {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .clock-time {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,109 @@
+/* Common styles for both desktop and mobile */
+
+body {
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 15vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .Timer {
+    position: absolute;
+    right: 34px;
+    bottom:30px
+  
+  }
+  
+  /* Styles for desktop/tablet */
+  @media screen and (min-width: 768px) {
+    .count-1 {
+      display: flex;
+    }
+    
+    .count-1 span {
+      font-size: 200px; 
+      margin: 0 2px; 
+      transition: transform 0.5s ease;
+    }
+  
+    .App-header {
+      min-height: 53vh;
+    } 
+
+    .count-1 span.changing {
+      animation: jump 0.5s;
+    }
+  
+    .Timer {
+      bottom: 50px;
+      right: 50px;
+    }
+  
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px); /* Adjust the jump height as needed */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  /* Styles for mobile */
+  @media screen and (max-width: 767px) {
+    .count-1 span {
+      font-size: 100px; /* Adjust font size for mobile */
+      margin: 0 2px;
+      transition: transform 0.5s ease;
+    }
+  
+    .count-1 span.changing {
+      animation: jump 0.5s;
+    }
+
+    .App-header {
+      min-height: 53vh;
+    }
+  
+    .Timer {
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px); /* Adjust the jump height as needed */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+  

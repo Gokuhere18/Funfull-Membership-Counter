@@ -1,0 +1,160 @@
+/* Common styles for both desktop and mobile */
+
+body {
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Timer {
+  position: absolute;
+  right: 34px;
+  bottom: 30px;
+}
+
+.counts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 20px 0;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 70px;
+  padding: 0 20px;
+  margin-top: -40px;
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* Prevent flex item from growing too much */
+  margin: 0 20px; /* Ensure spacing between arrows and count */
+}
+
+.count-value {
+  font-size: 200px; /* Ensure consistent font size for counter values */
+  margin: 0 2px;
+  transition: transform 0.5s ease;
+  white-space: nowrap; /* Prevent line break within the number */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.count-value.changing {
+  animation: jump 0.5s;
+}
+
+/* Styles for desktop */
+@media screen and (min-width: 1024px) {
+  .Timer {
+    bottom: 50px;
+    right: 50px;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust the jump height as needed */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Styles for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .App-header {
+    min-height: 60vh;
+  }
+
+  .count-value {
+    font-size: 150px; /* Adjust font size for tablets */
+  }
+
+  .Timer {
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .arrow { 
+    margin-top: -40px;
+    padding: 0 5px;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px); /* Adjust the jump height for tablets */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 767px) {
+  .count-value {
+    font-size: 100px; /* Adjust font size for mobile */
+  }
+
+  .App-header {
+    min-height: 53vh;
+  }
+
+  .arrow { 
+    margin-top: -40px;
+    padding: 0 5px;
+  }
+
+  .Timer {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* Adjust the jump height as needed */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

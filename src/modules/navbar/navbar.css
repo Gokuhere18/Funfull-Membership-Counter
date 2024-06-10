@@ -1,0 +1,66 @@
+/* src/modules/navbar/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Default width for larger screens */
+    max-width: 900px; /* Ensures it doesn't overflow the container */
+    margin: 20px auto; /* Center the navbar horizontally */
+    border-radius: 8px;
+    margin-top: 100px;
+    /* padding: 10px; */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  .navbar button {
+    flex: 1; /* Allow buttons to grow and fill the navbar equally */
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #3c3d3f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 80px;
+    font-size: 25px;
+  }
+  
+  .navbar button:hover {
+    background-color: #003f7f;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet (portrait and landscape) */
+  @media (max-width: 1024px) {
+    .navbar {
+      width: 90%; /* Slightly wider on tablets */
+    }
+  }
+  
+  /* Mobile devices (landscape) */
+  @media (max-width: 768px) and (min-width: 481px) {
+    .navbar {
+      width: 95%; /* Almost full width on landscape mobile */
+    }
+    
+    .navbar button {
+      margin: 0 5px;
+    }
+  }
+  
+  /* Mobile devices (portrait) */
+  @media (max-width: 480px) {
+    .navbar {
+      flex-direction: row; /* Keep buttons in a row */
+      width: 90%; /* Adjust the width for better alignment */
+    }
+  
+    .navbar button {
+      margin: 5px; /* Add space between buttons */
+      width: calc(50% - 10px); /* Adjust width to fit buttons side by side with margin */
+      font-size: 15px; /* Adjust font size for smaller screens */
+    }
+  }
+  

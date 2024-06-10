@@ -1,0 +1,47 @@
+h1 {
+    font-family: "Roboto";
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .timer-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timer {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+  }
+  
+  .text {
+    color: #aaa;
+  }
+  
+  .value {
+    font-size: 30px;
+  }
+  
+  .info {
+    max-width: 360px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .button-wrapper {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+
+  @media (max-width: 767px) {
+    .value {
+      font-size: 15px; /* Adjust the font size for smaller screens */
+    }
+  }
