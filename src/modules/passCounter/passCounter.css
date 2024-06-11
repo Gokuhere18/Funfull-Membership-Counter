@@ -111,6 +111,8 @@ body {
   .arrow { 
     margin-top: -40px;
     padding: 0 5px;
+    font-size: 50px;
+
   }
 
   @keyframes jump {
@@ -139,6 +141,7 @@ body {
   .arrow { 
     margin-top: -40px;
     padding: 0 5px;
+    font-size: 50px;
   }
 
   .Timer {
