@@ -22,7 +22,19 @@ function MembershipCounter() {
           throw new Error('Network response was not ok');
         }
         const jsonData = await response.json();
-        setData(jsonData ? jsonData[0].total_active_membership.toLocaleString('en-IN') : 0);
+        
+        const urlForPass = 'https://dashboard-preprod.funfull.com/current_pass_count';
+  
+        const requestOptionsForPass = {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' }
+        };
+        let responseForPass = await fetch(urlForPass, requestOptionsForPass);
+        if (!responseForPass.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const jsonDataForPass = await responseForPass.json();
+        setData(jsonData && jsonDataForPass ? (jsonData[0].total_active_membership + jsonDataForPass[0].total_redeem).toLocaleString('en-IN') : jsonData ? jsonData[0].total_active_membership.toLocaleString('en-IN') : 0 );
       } catch (error) {
         console.error('Error fetching data:', error);
       }
