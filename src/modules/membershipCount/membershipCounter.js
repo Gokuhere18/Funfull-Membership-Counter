@@ -80,7 +80,7 @@ function MembershipCounter() {
           ))}
         </div>
           <div>
-          <data>Membership Count</data>
+          <data>Active Membership + Active Passes</data>
         </div>
       </header>
     </div>

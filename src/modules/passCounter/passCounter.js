@@ -110,7 +110,7 @@ function PassCounter() {
             {displayType === 'summerPass' && (
               <>
                 <div className="count-value">{currentCount}</div>
-                <div>SummerPass Purchased</div>
+                <div>Pass Purchased</div>
               </>
             )}
             {displayType === 'today' && (
